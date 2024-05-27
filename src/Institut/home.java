@@ -1,0 +1,16 @@
+package Institut;
+
+import javax.swing.JPanel;
+
+public class home extends JPanel {
+
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * Create the panel.
+	 */
+	public home() {
+
+	}
+
+}
