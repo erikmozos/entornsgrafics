@@ -23,7 +23,6 @@ public class nouProfessor extends JPanel {
     private JTextField textFieldAssignatura;
 
     // Lista estática para almacenar profesores
-    public static List<Professor> professors = new ArrayList<>();
 
     private mostrarProfessors mostrarPanel;
 
@@ -138,7 +137,5 @@ public class nouProfessor extends JPanel {
         String assignatura = textFieldAssignatura.getText();
 
         Professor professor = new Professor(nom, dni, edat, assignatura);
-        professors.add(professor);
-        mostrarPanel.actualizarDatos(); // Llamar al método para actualizar el JTextArea
     }
 }

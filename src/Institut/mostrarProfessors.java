@@ -16,22 +16,5 @@ public class mostrarProfessors extends JPanel {
         JScrollPane scrollPane = new JScrollPane(textArea);
         setLayout(new java.awt.BorderLayout());
         add(scrollPane, java.awt.BorderLayout.CENTER);
-        cargarProfessors();
-    }
-
-    public void cargarProfessors() {
-        List<Professor> professors = nouProfessor.professors;
-        textArea.setText(""); // Limpiar el JTextArea antes de agregar nuevas filas
-        for (Professor professor : professors) {
-            textArea.append("Nom: " + professor.getNom() + "\n");
-            textArea.append("DNI: " + professor.getDni() + "\n");
-            textArea.append("Edat: " + professor.getEdat() + "\n");
-            textArea.append("Assignatura: " + professor.getAssignaturaDonada() + "\n");
-            textArea.append("\n"); // Línea en blanco entre profesores
-        }
-    }
-
-    public void actualizarDatos() {
-        cargarProfessors();
-    }
+}
 }
