@@ -20,7 +20,13 @@ public class cards extends JPanel {
         this.add(homePanel, "homeid");
         
         JPanel nouProfessorPanel = new nouProfessor();
-        this.add(nouProfessorPanel, "professorid");
+        this.add(nouProfessorPanel, "nouprofessorid");
+        
+        JPanel borrarProfessorPanel = new borrarProfesor();
+        this.add(borrarProfessorPanel, "borrarprofessorid");
+        
+        JPanel mostrarProfessorPanel = new mostrarProfessors();
+        this.add(mostrarProfessorPanel, "mostrarprofessorid");
     }
 
     // Method to show a specific card

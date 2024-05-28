@@ -1,6 +1,7 @@
 package Institut;
 
 import javax.swing.JPanel;
+import javax.swing.JLabel;
 
 public class home extends JPanel {
 
@@ -10,6 +11,9 @@ public class home extends JPanel {
 	 * Create the panel.
 	 */
 	public home() {
+		
+		JLabel lblNewLabel = new JLabel("Institut");
+		add(lblNewLabel);
 
 	}
 

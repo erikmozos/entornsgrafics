@@ -1,4 +1,4 @@
-package Institut;
+                              package Institut;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -66,6 +66,9 @@ public class Institut extends JFrame {
         JMenuItem mntmBorrarProfessor = new JMenuItem("Borrar Professor");
         mnProfessor.add(mntmBorrarProfessor);
         
+        JMenuItem mntmmostrarProfessors = new JMenuItem("Mostrar Professors");
+        mnProfessor.add(mntmmostrarProfessors);
+        
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
@@ -76,9 +79,24 @@ public class Institut extends JFrame {
         mntmNouProfessor.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                cardPanel.showCard("professorid");
+                cardPanel.showCard("nouprofessorid");
             }
         });
+        
+        mntmBorrarProfessor.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cardPanel.showCard("borrarprofessorid");
+            }
+        });
+        
+        mntmmostrarProfessors.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cardPanel.showCard("mostrarprofessorid");
+            }
+        });
+        
         
         GroupLayout gl_contentPane = new GroupLayout(contentPane);
         gl_contentPane.setHorizontalGroup(
