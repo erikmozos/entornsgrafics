@@ -1,22 +1,29 @@
-                              package Institut;
+package Institut;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 
 public class Institut extends JFrame {
 
+	public static ArrayList<Professor> arrayprofessors;
     private static final long serialVersionUID = 1L;
     private JPanel contentPane;
     private cards cardPanel; // Panel with CardLayout
+    private JTextArea textArea;
 
     /**
      * Launch the application.
@@ -27,6 +34,7 @@ public class Institut extends JFrame {
                 try {
                     Institut frame = new Institut();
                     frame.setVisible(true);
+                    arrayprofessors = new ArrayList<Professor>();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -67,6 +75,8 @@ public class Institut extends JFrame {
         mnProfessor.add(mntmBorrarProfessor);
         
         JMenuItem mntmmostrarProfessors = new JMenuItem("Mostrar Professors");
+        mntmmostrarProfessors.addFocusListener(new FocusAdapter() {
+        	});
         mnProfessor.add(mntmmostrarProfessors);
         
         contentPane = new JPanel();
@@ -94,6 +104,11 @@ public class Institut extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 cardPanel.showCard("mostrarprofessorid");
+                textArea = new JTextArea();
+                
+                for(Professor p : Institut.arrayprofessors) {
+                	textArea.append(p.toString());
+                }
             }
         });
         

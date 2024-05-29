@@ -4,6 +4,9 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import java.util.List;
+import javax.swing.JTextField;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
 
 public class mostrarProfessors extends JPanel {
 
@@ -11,10 +14,19 @@ public class mostrarProfessors extends JPanel {
     private JTextArea textArea;
 
     public mostrarProfessors() {
-        textArea = new JTextArea();
-        textArea.setEditable(false);
-        JScrollPane scrollPane = new JScrollPane(textArea);
-        setLayout(new java.awt.BorderLayout());
-        add(scrollPane, java.awt.BorderLayout.CENTER);
-}
+        JScrollPane scrollPane = new JScrollPane();
+        GroupLayout groupLayout = new GroupLayout(this);
+        groupLayout.setHorizontalGroup(
+        	groupLayout.createParallelGroup(Alignment.LEADING)
+        		.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 450, GroupLayout.PREFERRED_SIZE)
+        );
+        groupLayout.setVerticalGroup(
+        	groupLayout.createParallelGroup(Alignment.LEADING)
+        		.addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 300, GroupLayout.PREFERRED_SIZE)
+        );
+        
+        
+        }
+    
+    
 }

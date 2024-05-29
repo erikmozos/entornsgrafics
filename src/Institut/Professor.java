@@ -28,7 +28,11 @@ public class Professor extends Persona {
         return assignaturaDonada;
     }
 
-    public void mostrarDades() {
-        System.out.println("Soc " + nom + ", el meu dni és " + dni + " i soc professor de " + assignaturaDonada + " amb " + edat + " anys.");
-    }
+
+	@Override
+	public String toString() {
+		return "Soc " + nom + ", el meu dni és " + dni + " i soc professor de " + assignaturaDonada + " amb " + edat + " anys.";
+	}
+    
+    
 }
